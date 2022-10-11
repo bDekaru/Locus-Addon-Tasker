@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="falcosc.locus.addon.tasker">
+    xmlns:tools="http://schemas.android.com/tools">
 
 
     <!-- Although many of these default to true, some users with modified ROMs have

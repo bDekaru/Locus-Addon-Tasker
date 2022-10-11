@@ -2,7 +2,8 @@
     <string name="uc_my_latitude">Last known location - Latitude in WGS coordinates</string>
     <string name="uc_my_longitude">Last known location - Longitude in WGS coordinates</string>
     <string name="uc_my_altitude">Last known location - Altitude value (in m). If [hasAltitude] is false, 0.0f is returned</string>
-    <string name="uc_my_accuracy">Last known location - Accuracy of the fix (in m). If hasAccuracy() is false, 0.0 is returned</string>
+    <string name="uc_my_accuracy_hor">Last known location - Horizontal accuracy of the fix (in m). If hasAccuracyHor() is false, 0.0 is returned</string>
+    <string name="uc_my_accuracy_ver">Last known location - Vertical accuracy of the fix (in m). If hasAccuracyVer() is false, 0.0 is returned</string>
     <string name="uc_my_gps_fix">Last known location - UTC time of this location (in ms)</string>
     <string name="uc_my_speed">Speed of the device in meters/second. If [hasSpeed] is \'false\', 0.0f is returned.</string>
     <string name="uc_sensor_hrm">Heart rate value in BMP. If hasSensorHeartRate() is false, 0.0 is returned.</string>
@@ -97,6 +98,8 @@
     <string name="uc_guide_nextvia_time">Relative time to the next via-point (or destination in case, no other via points exists).</string>
     <string name="uc_calc_remain_uphill_elevation">Remaining uphill elevation based on altitude values of each track point. Accuracy is dependent on the amount and quality of track point altitude values. Only available during Navigation based on an existing track.</string>
     <string name="uc_calc_remain_downhill_elevation">Remaining downhill elevation based on altitude values of each track point. Accuracy is dependent on the amount and quality of track point altitude values. Only available during Navigation based on an existing track.</string>
+    <string name="uc_calc_remain_uphill_elevation_percent">Remaining uphill elevation based on altitude values of each track point. Accuracy is dependent on the amount and quality of track point altitude values. Only available during Navigation based on an existing track.</string>
+    <string name="uc_calc_remain_downhill_elevation_percent">Remaining downhill elevation based on altitude values of each track point. Accuracy is dependent on the amount and quality of track point altitude values. Only available during Navigation based on an existing track.</string>
     <string name="uc_navigation_point_index">Index of nearest Point of the current navigation track. Only available during Navigation based on an existing track.</string>
     <string name="uc_navigation_track_name">Name of Track which is used for Navigation. Only available during Navigation based on an existing track.</string>
 </resources>

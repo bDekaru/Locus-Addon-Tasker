@@ -18,6 +18,8 @@ import locus.api.objects.geoData.Track;
 public final class NavigationProgress {
     private int mRemainingUphill;
     private int mRemainingDownhill;
+    private int mRemainingUphillPercent;
+    private int mRemainingDownhillPercent;
     public int pointIndex = -1;
     public String trackName;
     private ErrorStatus mError;
@@ -113,6 +115,20 @@ public final class NavigationProgress {
         return Integer.toString(mRemainingDownhill);
     }
 
+    public String getRemainingUphillPercent() {
+        if (mError != null) {
+            return mError.toString();
+        }
+        return Integer.toString(mRemainingUphillPercent);
+    }
+
+    public String getRemainingDownhillPercent() {
+        if (mError != null) {
+            return mError.toString();
+        }
+        return Integer.toString(mRemainingDownhillPercent);
+    }
+
     public NavigationProgress(@NonNull UpdateContainer updateContainer) {
 
         LocusCache locusCache = LocusCache.getInstanceNullable();
@@ -140,6 +156,8 @@ public final class NavigationProgress {
                 locusCache.mLastSelectedTrack.mPreviousFoundIndex = pointIndex;
                 mRemainingUphill = locusCache.mLastSelectedTrack.mRemainingTrackElevation[pointIndex].remainingUphill;
                 mRemainingDownhill = locusCache.mLastSelectedTrack.mRemainingTrackElevation[pointIndex].remainingDownhill;
+                mRemainingUphillPercent = locusCache.mLastSelectedTrack.mRemainingTrackElevation[0].remainingUphill / mRemainingUphill * 100;
+                mRemainingDownhillPercent = locusCache.mLastSelectedTrack.mRemainingTrackElevation[0].remainingDownhill / mRemainingDownhill * 100;
                 trackName = locusCache.mLastSelectedTrack.mTrack.getName();
             }
         } catch (Exception e) {
