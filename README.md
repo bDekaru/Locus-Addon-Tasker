@@ -1,4 +1,5 @@
-# Locus Map Tasker Plugin
+# Locus Map Tasker Plugin [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/A0A2DN3BX)
 
 This is a [Tasker](https://tasker.joaoapps.com/) plugin for [Locus Map](https://www.locusmap.app) application.
 
