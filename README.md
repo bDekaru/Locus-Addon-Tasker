@@ -1,21 +1,12 @@
-<a href='https://play.google.com/store/apps/details?id=falcosc.locus.addon.tasker&utm_source=GitHub' >
-  <img alt='Locus Maps Tasker Plugin' src='app/src/main/res/mipmap-xxhdpi/ic_launcher.png' align="right"/>
-</a>
-
 # Locus Map Tasker Plugin
 
-This is a [Tasker](https://tasker.joaoapps.com/) plugin for [Locus Map](http://www.locusmap.eu) application.
+This is a [Tasker](https://tasker.joaoapps.com/) plugin for [Locus Map](https://www.locusmap.app) application.
 
 It was created to solve very special customization needs which could not get into Locus Map.
-<a href='https://play.google.com/store/apps/details?id=falcosc.locus.addon.tasker&utm_source=GitHub' >
-  <img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' width="144" align="right"/>
-</a>
 
 # Installation
 
 The project setup was made with Android Studio and run's best there.
-But you could just get the App ready to use from
-[Google Play](https://play.google.com/store/apps/details?id=falcosc.locus.addon.tasker&utm_source=GitHub)
 
 # Usage
 
