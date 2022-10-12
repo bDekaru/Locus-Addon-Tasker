@@ -207,6 +207,8 @@ public class UpdateContainerFieldFactory {
         list.add(extField("calc_remain_downhill_elevation", u -> u.getNavigationProgress().getRemainingDownhill()));
         list.add(extField("calc_remain_uphill_elevation_percent", u -> u.getNavigationProgress().getRemainingUphillPercent()));
         list.add(extField("calc_remain_downhill_elevation_percent", u -> u.getNavigationProgress().getRemainingDownhillPercent()));
+        list.add(extField("calc_total_uphill_elevation", u -> u.getNavigationProgress().getTotalUphill()));
+        list.add(extField("calc_total_downhill_elevation", u -> u.getNavigationProgress().getTotalDownhill()));
         list.add(extField("navigation_point_index", u -> u.getNavigationProgress().pointIndex));
         list.add(extField("navigation_track_name", u -> u.getNavigationProgress().trackName));
 

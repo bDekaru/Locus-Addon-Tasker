@@ -62,12 +62,12 @@
 	<Project sr="proj0" ve="2">
 		<cdate>1665509090285</cdate>
 		<name>Live Tracking</name>
-		<pids>20,21,5</pids>
-		<tids>18,22,17,19,23</tids>
+		<pids>5,20,21</pids>
+		<tids>18,17,19,23,22</tids>
 	</Project>
 	<Task sr="task17">
 		<cdate>1665439991953</cdate>
-		<edate>1665517858326</edate>
+		<edate>1665600771951</edate>
 		<id>17</id>
 		<nme>LiveTrackingSendPos</nme>
 		<pri>100</pri>
@@ -112,23 +112,31 @@
 			<Int sr="arg9" val="1"/>
 		</Action>
 		<Action sr="act13" ve="7">
-			<code>61</code>
-			<Int sr="arg0" val="300"/>
+			<code>172</code>
+			<Str sr="arg0" ve="3">m</Str>
+			<Int sr="arg1" val="4000"/>
+			<Int sr="arg2" val="80"/>
+			<Int sr="arg3" val="50"/>
+			<Int sr="arg4" val="3"/>
 			<ConditionList sr="if">
 				<Condition sr="c0" ve="3">
 					<lhs>%sent_count</lhs>
-					<op>7</op>
+					<op>0</op>
 					<rhs>0</rhs>
 				</Condition>
 			</ConditionList>
 		</Action>
 		<Action sr="act14" ve="7">
-			<code>62</code>
-			<Str sr="arg0" ve="3">0,300,100,300</Str>
+			<code>172</code>
+			<Str sr="arg0" ve="3">s</Str>
+			<Int sr="arg1" val="4000"/>
+			<Int sr="arg2" val="80"/>
+			<Int sr="arg3" val="50"/>
+			<Int sr="arg4" val="3"/>
 			<ConditionList sr="if">
 				<Condition sr="c0" ve="3">
 					<lhs>%sent_count</lhs>
-					<op>0</op>
+					<op>7</op>
 					<rhs>0</rhs>
 				</Condition>
 			</ConditionList>
@@ -245,7 +253,7 @@ The size of the response in bytes&lt;/_array_net.dinglisch.android.tasker.RELEVA
 		<edate>1665517841928</edate>
 		<id>18</id>
 		<nme>LiveTrackingCollectPos</nme>
-		<pri>100</pri>
+		<pri>6</pri>
 		<Action sr="act0" ve="7">
 			<code>1120274117</code>
 			<Bundle sr="arg0">
@@ -605,26 +613,58 @@ true if it after the action the setting is enabled, false if not&lt;/_array_net.
 	</Task>
 	<Task sr="task22">
 		<cdate>1665499386387</cdate>
-		<edate>1665508347156</edate>
+		<edate>1665584689284</edate>
 		<id>22</id>
 		<nme>EnableLiveTracking</nme>
 		<pri>1000</pri>
 		<Action sr="act0" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">LiveTrackingCollectPos</Str>
+			<Int sr="arg1">
+				<var>%priority</var>
+			</Int>
+			<Int sr="arg10" val="1"/>
+			<Str sr="arg2" ve="3"/>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+			<Int sr="arg5" val="0"/>
+			<Int sr="arg6" val="0"/>
+			<Str sr="arg7" ve="3"/>
+			<Int sr="arg8" val="0"/>
+			<Int sr="arg9" val="0"/>
+		</Action>
+		<Action sr="act1" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">LiveTrackingToggleAirplaneAndSendPos</Str>
+			<Int sr="arg1">
+				<var>%priority</var>
+			</Int>
+			<Int sr="arg10" val="1"/>
+			<Str sr="arg2" ve="3"/>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+			<Int sr="arg5" val="0"/>
+			<Int sr="arg6" val="0"/>
+			<Str sr="arg7" ve="3"/>
+			<Int sr="arg8" val="0"/>
+			<Int sr="arg9" val="0"/>
+		</Action>
+		<Action sr="act2" ve="7">
 			<code>159</code>
 			<Str sr="arg0" ve="3">Live Tracking Collect</Str>
 			<Int sr="arg1" val="1"/>
 		</Action>
-		<Action sr="act1" ve="7">
+		<Action sr="act3" ve="7">
 			<code>159</code>
 			<Str sr="arg0" ve="3">Live Tracking Send - AirplaneToggler</Str>
 			<Int sr="arg1" val="1"/>
 		</Action>
-		<Action sr="act2" ve="7">
+		<Action sr="act4" ve="7">
 			<code>159</code>
 			<Str sr="arg0" ve="3">Live Tracking Send</Str>
 			<Int sr="arg1" val="0"/>
 		</Action>
-		<Action sr="act3" ve="7">
+		<Action sr="act5" ve="7">
 			<code>548</code>
 			<Str sr="arg0" ve="3">Live Tracking Started!</Str>
 			<Int sr="arg1" val="1"/>
@@ -641,22 +681,6 @@ true if it after the action the setting is enabled, false if not&lt;/_array_net.
 			<Str sr="arg7" ve="3"/>
 			<Str sr="arg8" ve="3"/>
 			<Int sr="arg9" val="1"/>
-		</Action>
-		<Action sr="act4" ve="7">
-			<code>130</code>
-			<Str sr="arg0" ve="3">LiveTrackingCollectPos</Str>
-			<Int sr="arg1">
-				<var>%priority</var>
-			</Int>
-			<Int sr="arg10" val="1"/>
-			<Str sr="arg2" ve="3"/>
-			<Str sr="arg3" ve="3"/>
-			<Str sr="arg4" ve="3"/>
-			<Int sr="arg5" val="0"/>
-			<Int sr="arg6" val="0"/>
-			<Str sr="arg7" ve="3"/>
-			<Int sr="arg8" val="0"/>
-			<Int sr="arg9" val="0"/>
 		</Action>
 	</Task>
 	<Task sr="task23">

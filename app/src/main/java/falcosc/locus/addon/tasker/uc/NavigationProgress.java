@@ -20,6 +20,9 @@ public final class NavigationProgress {
     private int mRemainingDownhill;
     private int mRemainingUphillPercent;
     private int mRemainingDownhillPercent;
+    private int mTotalUphill;
+    private int mTotalDownhill;
+
     public int pointIndex = -1;
     public String trackName;
     private ErrorStatus mError;
@@ -55,17 +58,18 @@ public final class NavigationProgress {
     public static class TrackData {
         public final Track mTrack;
         public int mPreviousFoundIndex;
-        public final Point[] mRemainingTrackElevation;
+        public Point[] mRemainingTrackElevation;
 
         public TrackData(Track track) {
             mTrack = track;
-            mRemainingTrackElevation = calculateRemainingElevation(track);
+            calculateRemainingElevation(track);
         }
 
         @SuppressWarnings("NumericCastThatLosesPrecision")
-        public static Point[] calculateRemainingElevation(@Nullable Track track) {
+        public void calculateRemainingElevation(@Nullable Track track) {
             if (track == null) {
-                return new Point[0];
+                mRemainingTrackElevation = new Point[0];
+                return;
             }
 
             Log.i(TAG, "recalculate track elevation of: " + track.getName()); //NON-NLS
@@ -73,31 +77,41 @@ public final class NavigationProgress {
             List<Location> points = track.getPoints();
             int size = points.size();
             //make array one point larger because we assign remaining elevation to point+1 because remain is current target point -1
-            Point[] remainingElevation = new Point[size + 1];
+            mRemainingTrackElevation = new Point[size + 1];
             double uphillElevation = 0.0;
             double downhillElevation = 0.0;
+            int filterAmount = 3; // Close-ish match to Strava's measured elevation.
+
+            boolean pastFilter = false;
             double nextAltitude = points.get(size - 1).getAltitude();
             for (int i = size - 1; i >= 0; i--) {
                 double currentAltitude = points.get(i).getAltitude();
                 if (nextAltitude > currentAltitude) {
-                    uphillElevation += nextAltitude - currentAltitude;
+                    double difference = nextAltitude - currentAltitude;
+                    if(difference >= filterAmount) {
+                        uphillElevation += difference;
+                        pastFilter = true;
+                    }
                 } else {
-                    downhillElevation += currentAltitude - nextAltitude;
+                    double difference = currentAltitude - nextAltitude;
+                    if(difference >= filterAmount) {
+                        downhillElevation += difference;
+                        pastFilter = true;
+                    }
                 }
 
                 Point p = new Point();
                 p.remainingUphill = (int) uphillElevation;
                 p.remainingDownhill = (int) downhillElevation;
-                remainingElevation[i + 1] = p;
+                mRemainingTrackElevation[i + 1] = p;
 
-                nextAltitude = currentAltitude;
+                if(pastFilter)
+                    nextAltitude = currentAltitude;
             }
             //assign remaining altitude of point 0 because we have no values at 0 because we read 1 point ahead.
-            remainingElevation[0] = remainingElevation[1];
+            mRemainingTrackElevation[0] = mRemainingTrackElevation[1];
 
             Log.i(TAG, "Points calculated: " + size); //NON-NLS
-
-            return remainingElevation;
         }
     }
 
@@ -129,6 +143,20 @@ public final class NavigationProgress {
         return Integer.toString(mRemainingDownhillPercent);
     }
 
+    public String getTotalUphill() {
+        if (mError != null) {
+            return mError.toString();
+        }
+        return Integer.toString(mTotalUphill);
+    }
+
+    public String getTotalDownhill() {
+        if (mError != null) {
+            return mError.toString();
+        }
+        return Integer.toString(mTotalDownhill);
+    }
+
     public NavigationProgress(@NonNull UpdateContainer updateContainer) {
 
         LocusCache locusCache = LocusCache.getInstanceNullable();
@@ -139,25 +167,16 @@ public final class NavigationProgress {
         }
 
         try {
-
-            if (locusCache.mLastSelectedTrack == null) {
-                setActiveTrack(locusCache, updateContainer);
-                mError = validateNavigationProgress(locusCache.mLastSelectedTrack, updateContainer);
-            } else {
-                mError = validateNavigationProgress(locusCache.mLastSelectedTrack, updateContainer);
-                if ((mError != null) && (mError != ErrorStatus.NO_NAV)) {
-                    //reset track if any error state detected, but avoid searching if no navigation is running
-                    setActiveTrack(locusCache, updateContainer);
-                    mError = validateNavigationProgress(locusCache.mLastSelectedTrack, updateContainer);
-                }
-            }
-
+            setActiveTrack(locusCache, updateContainer);
+            mError = validateNavigationProgress(locusCache.mLastSelectedTrack, updateContainer);
             if (mError == null) {
                 locusCache.mLastSelectedTrack.mPreviousFoundIndex = pointIndex;
                 mRemainingUphill = locusCache.mLastSelectedTrack.mRemainingTrackElevation[pointIndex].remainingUphill;
                 mRemainingDownhill = locusCache.mLastSelectedTrack.mRemainingTrackElevation[pointIndex].remainingDownhill;
-                mRemainingUphillPercent = locusCache.mLastSelectedTrack.mRemainingTrackElevation[0].remainingUphill / mRemainingUphill * 100;
-                mRemainingDownhillPercent = locusCache.mLastSelectedTrack.mRemainingTrackElevation[0].remainingDownhill / mRemainingDownhill * 100;
+                mRemainingUphillPercent = mRemainingUphill / locusCache.mLastSelectedTrack.mRemainingTrackElevation[0].remainingUphill * 100;
+                mRemainingDownhillPercent = mRemainingDownhill / locusCache.mLastSelectedTrack.mRemainingTrackElevation[0].remainingDownhill * 100;
+                mTotalUphill = locusCache.mLastSelectedTrack.mRemainingTrackElevation[0].remainingUphill;
+                mTotalDownhill = locusCache.mLastSelectedTrack.mRemainingTrackElevation[0].remainingDownhill;
                 trackName = locusCache.mLastSelectedTrack.mTrack.getName();
             }
         } catch (Exception e) {

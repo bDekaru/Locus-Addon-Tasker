@@ -100,6 +100,8 @@
     <string name="uc_calc_remain_downhill_elevation">Remaining downhill elevation based on altitude values of each track point. Accuracy is dependent on the amount and quality of track point altitude values. Only available during Navigation based on an existing track.</string>
     <string name="uc_calc_remain_uphill_elevation_percent">Remaining uphill elevation based on altitude values of each track point. Accuracy is dependent on the amount and quality of track point altitude values. Only available during Navigation based on an existing track.</string>
     <string name="uc_calc_remain_downhill_elevation_percent">Remaining downhill elevation based on altitude values of each track point. Accuracy is dependent on the amount and quality of track point altitude values. Only available during Navigation based on an existing track.</string>
+    <string name="uc_calc_total_uphill_elevation">Total uphill elevation based on altitude values of each track point. Accuracy is dependent on the amount and quality of track point altitude values. Only available during Navigation based on an existing track.</string>
+    <string name="uc_calc_total_downhill_elevation">Total downhill elevation based on altitude values of each track point. Accuracy is dependent on the amount and quality of track point altitude values. Only available during Navigation based on an existing track.</string>
     <string name="uc_navigation_point_index">Index of nearest Point of the current navigation track. Only available during Navigation based on an existing track.</string>
     <string name="uc_navigation_track_name">Name of Track which is used for Navigation. Only available during Navigation based on an existing track.</string>
 </resources>
