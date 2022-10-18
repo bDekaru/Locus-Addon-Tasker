@@ -173,8 +173,8 @@ public final class NavigationProgress {
                 locusCache.mLastSelectedTrack.mPreviousFoundIndex = pointIndex;
                 mRemainingUphill = locusCache.mLastSelectedTrack.mRemainingTrackElevation[pointIndex].remainingUphill;
                 mRemainingDownhill = locusCache.mLastSelectedTrack.mRemainingTrackElevation[pointIndex].remainingDownhill;
-                mRemainingUphillPercent = mRemainingUphill / locusCache.mLastSelectedTrack.mRemainingTrackElevation[0].remainingUphill * 100;
-                mRemainingDownhillPercent = mRemainingDownhill / locusCache.mLastSelectedTrack.mRemainingTrackElevation[0].remainingDownhill * 100;
+                mRemainingUphillPercent = (int)((float)mRemainingUphill / locusCache.mLastSelectedTrack.mRemainingTrackElevation[0].remainingUphill * 100);
+                mRemainingDownhillPercent = (int)((float)mRemainingDownhill / locusCache.mLastSelectedTrack.mRemainingTrackElevation[0].remainingDownhill * 100);
                 mTotalUphill = locusCache.mLastSelectedTrack.mRemainingTrackElevation[0].remainingUphill;
                 mTotalDownhill = locusCache.mLastSelectedTrack.mRemainingTrackElevation[0].remainingDownhill;
                 trackName = locusCache.mLastSelectedTrack.mTrack.getName();

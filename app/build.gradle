@@ -1,6 +1,21 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        debug {
+            storeFile file('C:\\Users\\Dekaru\\Android Key Store.jks')
+            storePassword 'dkdkdk'
+            keyAlias 'Dekaru'
+            keyPassword 'dkdkdk'
+        }
+        release {
+            storeFile file('C:\\Users\\Dekaru\\Android Key Store.jks')
+            storePassword 'dkdkdk'
+            keyAlias 'Dekaru'
+            keyPassword 'dkdkdk'
+        }
+    }
+
     // setup SDK
     compileSdkVersion Integer.valueOf(PARAM_COMPILE_SDK_VERSION)
 
@@ -10,6 +25,7 @@ android {
         versionCode 50
         versionName '1.7.0'
         buildConfigField 'String', 'CONTACT_EMAIL', '"' + getContactEmail() + '"'
+        signingConfig signingConfigs.release
     }
     packagingOptions {
         resources {
