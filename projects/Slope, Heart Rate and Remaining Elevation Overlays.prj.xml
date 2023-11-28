@@ -1,13 +1,18 @@
-<TaskerData sr="" dvi="1" tv="6.0.10">
-	<dmetric>720.0,1280.0</dmetric>
+<TaskerData sr="" dvi="1" tv="6.1.32">
+	<dmetric>640.0,1136.0</dmetric>
 	<Profile sr="prof16" ve="2">
 		<cdate>1665007189053</cdate>
-		<clp>true</clp>
-		<edate>1666527059440</edate>
+		<edate>1701174264076</edate>
 		<id>16</id>
 		<mid0>10</mid0>
-		<nme>Slope and Elevation Overlays</nme>
-		<Event sr="con0" ve="2">
+		<nme>Update Overlays</nme>
+		<App sr="con0" ve="2">
+			<cls0>com.asamm.locus.core.LauncherActivity</cls0>
+			<flags>2</flags>
+			<label0>Locus Map Classic</label0>
+			<pkg0>menion.android.locus.pro</pkg0>
+		</App>
+		<Event sr="con1" ve="2">
 			<code>2095</code>
 			<pri>0</pri>
 			<Bundle sr="arg0">
@@ -19,12 +24,34 @@
 			<Str sr="arg1" ve="3">1000</Str>
 		</Event>
 	</Profile>
+	<Profile sr="prof33" ve="2">
+		<cdate>1682178929336</cdate>
+		<clp>true</clp>
+		<edate>1701174227276</edate>
+		<flags>8</flags>
+		<id>33</id>
+		<mid0>30</mid0>
+		<nme>Toggle Touch Screen</nme>
+		<Event sr="con0" ve="2">
+			<code>2077</code>
+			<pri>0</pri>
+			<Bundle sr="arg0">
+				<Vals sr="val">
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;%sa_action
+Action
+The intent action that opened the secondary app. Can be empty.&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;&lt;/StringArray&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
+				</Vals>
+			</Bundle>
+		</Event>
+	</Profile>
 	<Profile sr="prof7" ve="2">
 		<cdate>1665016238055</cdate>
 		<clp>true</clp>
-		<edate>1666086171066</edate>
+		<edate>1701174192210</edate>
 		<flags>8</flags>
 		<id>7</id>
+		<limit>true</limit>
 		<mid0>8</mid0>
 		<nme>Toggle Lock Locus Screen</nme>
 		<Event sr="con0" ve="2">
@@ -43,9 +70,9 @@
 	<Project sr="proj0" ve="2">
 		<cdate>1620197036541</cdate>
 		<name>Locus</name>
-		<pids>16,7</pids>
-		<scenes>LocusDashSlopeOverlay,LocusDashRemEleOverlay</scenes>
-		<tids>9,91,94,93,92,3,4,2,10,6,8,71,32,31,27,13</tids>
+		<pids>16,7,33</pids>
+		<scenes>LocusDashSlopeOverlay,LocusDashHeartOverlay,LocusDashRemEleOverlay</scenes>
+		<tids>71,3,93,29,6,28,9,4,8,35,10,31,32,30,92,13,94,91,34,2,27,25,36</tids>
 		<Share sr="Share">
 			<b>false</b>
 			<d>Locus Maps Tasker Plugin Examples
@@ -54,18 +81,180 @@ https://github.com/Falcosc/locus-addon-tasker/wiki/Examples#examples</d>
 			<t></t>
 		</Share>
 	</Project>
-	<Scene sr="sceneLocusDashRemEleOverlay">
+	<Scene sr="sceneLocusDashHeartOverlay">
 		<cdate>1533132490265</cdate>
-		<edate>1666038702598</edate>
+		<edate>1695300564244</edate>
 		<gridSize>1</gridSize>
-		<heightLand>184</heightLand>
-		<heightPort>78</heightPort>
-		<nme>LocusDashRemEleOverlay</nme>
-		<widthLand>363</widthLand>
-		<widthPort>222</widthPort>
+		<heightLand>163</heightLand>
+		<heightPort>200</heightPort>
+		<nme>LocusDashHeartOverlay</nme>
+		<widthLand>322</widthLand>
+		<widthPort>100</widthPort>
 		<RectElement sr="elements0">
 			<flags>6</flags>
-			<geom>0,0,221,77,-1,-1,-1,-1</geom>
+			<geom>0,0,100,100,0,0,0,0</geom>
+			<Str sr="arg0" ve="3">Background</Str>
+			<Int sr="arg1" val="0"/>
+			<Str sr="arg2" ve="3"/>
+			<Str sr="arg3" ve="3"/>
+			<Int sr="arg4" val="0"/>
+			<Str sr="arg5" ve="3">#FF000000</Str>
+			<Int sr="arg6" val="0"/>
+			<Int sr="arg7" val="0"/>
+		</RectElement>
+		<TextElement sr="elements1" ve="3">
+			<clickTask>25</clickTask>
+			<flags>4</flags>
+			<geom>0,0,94,94,0,0,173,64</geom>
+			<Str sr="arg0" ve="3">ZoneTL</Str>
+			<Str sr="arg1" ve="3">%HeartZone</Str>
+			<Int sr="arg2" val="37"/>
+			<Int sr="arg3" val="100"/>
+			<Str sr="arg4" ve="3">#FF000000</Str>
+			<Str sr="arg5" ve="3"/>
+			<Int sr="arg6" val="0"/>
+			<Int sr="arg7" val="0"/>
+			<Int sr="arg8" val="0"/>
+			<RectElement sr="background">
+				<flags>4</flags>
+				<geom>-1,-1,-1,-1,-1,-1,-1,-1</geom>
+				<Str sr="arg0" ve="3"/>
+				<Int sr="arg1" val="0"/>
+				<Str sr="arg2" ve="3"/>
+				<Str sr="arg3" ve="3"/>
+				<Int sr="arg4" val="0"/>
+				<Str sr="arg5" ve="3">#FF000000</Str>
+				<Int sr="arg6" val="0"/>
+				<Int sr="arg7" val="0"/>
+			</RectElement>
+		</TextElement>
+		<TextElement sr="elements2" ve="3">
+			<clickTask>28</clickTask>
+			<flags>4</flags>
+			<geom>6,0,94,94,0,0,173,64</geom>
+			<Str sr="arg0" ve="3">ZoneTR</Str>
+			<Str sr="arg1" ve="3">%HeartZone</Str>
+			<Int sr="arg2" val="37"/>
+			<Int sr="arg3" val="100"/>
+			<Str sr="arg4" ve="3">#FF000000</Str>
+			<Str sr="arg5" ve="3"/>
+			<Int sr="arg6" val="0"/>
+			<Int sr="arg7" val="0"/>
+			<Int sr="arg8" val="0"/>
+			<RectElement sr="background">
+				<flags>4</flags>
+				<geom>-1,-1,-1,-1,-1,-1,-1,-1</geom>
+				<Str sr="arg0" ve="3"/>
+				<Int sr="arg1" val="0"/>
+				<Str sr="arg2" ve="3"/>
+				<Str sr="arg3" ve="3"/>
+				<Int sr="arg4" val="0"/>
+				<Str sr="arg5" ve="3">#FF000000</Str>
+				<Int sr="arg6" val="0"/>
+				<Int sr="arg7" val="0"/>
+			</RectElement>
+		</TextElement>
+		<TextElement sr="elements3" ve="3">
+			<clickTask>29</clickTask>
+			<flags>4</flags>
+			<geom>0,6,94,94,0,0,173,64</geom>
+			<Str sr="arg0" ve="3">ZoneBL</Str>
+			<Str sr="arg1" ve="3">%HeartZone</Str>
+			<Int sr="arg2" val="37"/>
+			<Int sr="arg3" val="100"/>
+			<Str sr="arg4" ve="3">#FF000000</Str>
+			<Str sr="arg5" ve="3"/>
+			<Int sr="arg6" val="0"/>
+			<Int sr="arg7" val="0"/>
+			<Int sr="arg8" val="0"/>
+			<RectElement sr="background">
+				<flags>4</flags>
+				<geom>-1,-1,-1,-1,-1,-1,-1,-1</geom>
+				<Str sr="arg0" ve="3"/>
+				<Int sr="arg1" val="0"/>
+				<Str sr="arg2" ve="3"/>
+				<Str sr="arg3" ve="3"/>
+				<Int sr="arg4" val="0"/>
+				<Str sr="arg5" ve="3">#FF000000</Str>
+				<Int sr="arg6" val="0"/>
+				<Int sr="arg7" val="0"/>
+			</RectElement>
+		</TextElement>
+		<TextElement sr="elements4" ve="3">
+			<clickTask>34</clickTask>
+			<flags>4</flags>
+			<geom>6,6,94,94,0,0,173,64</geom>
+			<Str sr="arg0" ve="3">ZoneBR</Str>
+			<Str sr="arg1" ve="3">%HeartZone</Str>
+			<Int sr="arg2" val="37"/>
+			<Int sr="arg3" val="100"/>
+			<Str sr="arg4" ve="3">#FF000000</Str>
+			<Str sr="arg5" ve="3"/>
+			<Int sr="arg6" val="0"/>
+			<Int sr="arg7" val="0"/>
+			<Int sr="arg8" val="0"/>
+			<RectElement sr="background">
+				<flags>4</flags>
+				<geom>-1,-1,-1,-1,-1,-1,-1,-1</geom>
+				<Str sr="arg0" ve="3"/>
+				<Int sr="arg1" val="0"/>
+				<Str sr="arg2" ve="3"/>
+				<Str sr="arg3" ve="3"/>
+				<Int sr="arg4" val="0"/>
+				<Str sr="arg5" ve="3">#FF000000</Str>
+				<Int sr="arg6" val="0"/>
+				<Int sr="arg7" val="0"/>
+			</RectElement>
+		</TextElement>
+		<TextElement sr="elements5" ve="3">
+			<clickTask>35</clickTask>
+			<flags>4</flags>
+			<geom>3,3,94,94,0,0,173,64</geom>
+			<Str sr="arg0" ve="3">Zone</Str>
+			<Str sr="arg1" ve="3">%HeartZone</Str>
+			<Int sr="arg2" val="37"/>
+			<Int sr="arg3" val="100"/>
+			<Str sr="arg4" ve="3">#FFFFCB00</Str>
+			<Str sr="arg5" ve="3"/>
+			<Int sr="arg6" val="0"/>
+			<Int sr="arg7" val="0"/>
+			<Int sr="arg8" val="0"/>
+			<RectElement sr="background">
+				<flags>4</flags>
+				<geom>-1,-1,-1,-1,-1,-1,-1,-1</geom>
+				<Str sr="arg0" ve="3"/>
+				<Int sr="arg1" val="0"/>
+				<Str sr="arg2" ve="3"/>
+				<Str sr="arg3" ve="3"/>
+				<Int sr="arg4" val="0"/>
+				<Str sr="arg5" ve="3">#FF000000</Str>
+				<Int sr="arg6" val="0"/>
+				<Int sr="arg7" val="0"/>
+			</RectElement>
+		</TextElement>
+		<PropertiesElement sr="props">
+			<Int sr="arg0" val="0"/>
+			<Int sr="arg1" val="2"/>
+			<Str sr="arg2" ve="3">#00FFFFFF</Str>
+			<Int sr="arg3" val="0"/>
+			<Str sr="arg4" ve="3">LocusDashOverlay</Str>
+			<Str sr="arg5" ve="3"/>
+			<Img sr="arg6" ve="2"/>
+			<Str sr="arg7" ve="3"/>
+		</PropertiesElement>
+	</Scene>
+	<Scene sr="sceneLocusDashRemEleOverlay">
+		<cdate>1533132490265</cdate>
+		<edate>1694719797682</edate>
+		<gridSize>1</gridSize>
+		<heightLand>163</heightLand>
+		<heightPort>79</heightPort>
+		<nme>LocusDashRemEleOverlay</nme>
+		<widthLand>322</widthLand>
+		<widthPort>197</widthPort>
+		<RectElement sr="elements0">
+			<flags>6</flags>
+			<geom>0,0,196,78,0,0,0,0</geom>
 			<Str sr="arg0" ve="3">Background</Str>
 			<Int sr="arg1" val="0"/>
 			<Str sr="arg2" ve="3"/>
@@ -78,10 +267,10 @@ https://github.com/Falcosc/locus-addon-tasker/wiki/Examples#examples</d>
 		<TextElement sr="elements1" ve="3">
 			<clickTask>91</clickTask>
 			<flags>4</flags>
-			<geom>0,0,218,74,0,0,196,73</geom>
+			<geom>0,0,193,75,0,0,173,64</geom>
 			<Str sr="arg0" ve="3">ElevationUp1</Str>
 			<Str sr="arg1" ve="3">%ElevationRemainingUp</Str>
-			<Int sr="arg2" val="32"/>
+			<Int sr="arg2" val="30"/>
 			<Int sr="arg3" val="100"/>
 			<Str sr="arg4" ve="3">#FF000000</Str>
 			<Str sr="arg5" ve="3"/>
@@ -104,10 +293,10 @@ https://github.com/Falcosc/locus-addon-tasker/wiki/Examples#examples</d>
 		<TextElement sr="elements2" ve="3">
 			<clickTask>92</clickTask>
 			<flags>4</flags>
-			<geom>4,4,218,74,0,0,196,73</geom>
+			<geom>3,3,193,75,0,0,173,64</geom>
 			<Str sr="arg0" ve="3">ElevationUp2</Str>
 			<Str sr="arg1" ve="3">%ElevationRemainingUp</Str>
-			<Int sr="arg2" val="32"/>
+			<Int sr="arg2" val="30"/>
 			<Int sr="arg3" val="100"/>
 			<Str sr="arg4" ve="3">#FF000000</Str>
 			<Str sr="arg5" ve="3"/>
@@ -130,10 +319,10 @@ https://github.com/Falcosc/locus-addon-tasker/wiki/Examples#examples</d>
 		<TextElement sr="elements3" ve="3">
 			<clickTask>93</clickTask>
 			<flags>4</flags>
-			<geom>0,4,218,74,0,0,196,73</geom>
+			<geom>0,3,193,75,0,0,173,64</geom>
 			<Str sr="arg0" ve="3">ElevationUp3</Str>
 			<Str sr="arg1" ve="3">%ElevationRemainingUp</Str>
-			<Int sr="arg2" val="32"/>
+			<Int sr="arg2" val="30"/>
 			<Int sr="arg3" val="100"/>
 			<Str sr="arg4" ve="3">#FF000000</Str>
 			<Str sr="arg5" ve="3"/>
@@ -156,10 +345,10 @@ https://github.com/Falcosc/locus-addon-tasker/wiki/Examples#examples</d>
 		<TextElement sr="elements4" ve="3">
 			<clickTask>94</clickTask>
 			<flags>4</flags>
-			<geom>4,0,218,74,0,0,196,73</geom>
+			<geom>3,0,193,75,0,0,173,64</geom>
 			<Str sr="arg0" ve="3">ElevationUp4</Str>
 			<Str sr="arg1" ve="3">%ElevationRemainingUp</Str>
-			<Int sr="arg2" val="32"/>
+			<Int sr="arg2" val="30"/>
 			<Int sr="arg3" val="100"/>
 			<Str sr="arg4" ve="3">#FF000000</Str>
 			<Str sr="arg5" ve="3"/>
@@ -182,10 +371,10 @@ https://github.com/Falcosc/locus-addon-tasker/wiki/Examples#examples</d>
 		<TextElement sr="elements5" ve="3">
 			<clickTask>71</clickTask>
 			<flags>4</flags>
-			<geom>2,2,218,74,0,0,196,73</geom>
+			<geom>1,1,193,75,0,0,173,64</geom>
 			<Str sr="arg0" ve="3">ElevationUp</Str>
 			<Str sr="arg1" ve="3">%ElevationRemainingUp</Str>
-			<Int sr="arg2" val="32"/>
+			<Int sr="arg2" val="30"/>
 			<Int sr="arg3" val="100"/>
 			<Str sr="arg4" ve="3">#FFFFCB00</Str>
 			<Str sr="arg5" ve="3"/>
@@ -218,16 +407,16 @@ https://github.com/Falcosc/locus-addon-tasker/wiki/Examples#examples</d>
 	</Scene>
 	<Scene sr="sceneLocusDashSlopeOverlay">
 		<cdate>1533132490265</cdate>
-		<edate>1666038699271</edate>
+		<edate>1681250849575</edate>
 		<gridSize>1</gridSize>
-		<heightLand>184</heightLand>
-		<heightPort>78</heightPort>
+		<heightLand>163</heightLand>
+		<heightPort>79</heightPort>
 		<nme>LocusDashSlopeOverlay</nme>
-		<widthLand>363</widthLand>
-		<widthPort>222</widthPort>
+		<widthLand>322</widthLand>
+		<widthPort>197</widthPort>
 		<RectElement sr="elements0">
 			<flags>6</flags>
-			<geom>0,0,221,77,-1,-1,-1,-1</geom>
+			<geom>0,0,196,78,0,0,0,0</geom>
 			<Str sr="arg0" ve="3">Background</Str>
 			<Int sr="arg1" val="0"/>
 			<Str sr="arg2" ve="3"/>
@@ -240,14 +429,14 @@ https://github.com/Falcosc/locus-addon-tasker/wiki/Examples#examples</d>
 		<TextElement sr="elements1" ve="3">
 			<clickTask>2</clickTask>
 			<flags>4</flags>
-			<geom>0,0,218,74,0,0,196,73</geom>
+			<geom>0,0,193,75,0,0,173,64</geom>
 			<Str sr="arg0" ve="3">Slope1</Str>
 			<Str sr="arg1" ve="3">%Slope</Str>
-			<Int sr="arg2" val="32"/>
+			<Int sr="arg2" val="30"/>
 			<Int sr="arg3" val="100"/>
 			<Str sr="arg4" ve="3">#FF000000</Str>
 			<Str sr="arg5" ve="3"/>
-			<Int sr="arg6" val="5"/>
+			<Int sr="arg6" val="0"/>
 			<Int sr="arg7" val="0"/>
 			<Int sr="arg8" val="0"/>
 			<RectElement sr="background">
@@ -266,14 +455,14 @@ https://github.com/Falcosc/locus-addon-tasker/wiki/Examples#examples</d>
 		<TextElement sr="elements2" ve="3">
 			<clickTask>3</clickTask>
 			<flags>4</flags>
-			<geom>4,4,218,74,0,0,196,73</geom>
+			<geom>3,3,193,75,0,0,173,64</geom>
 			<Str sr="arg0" ve="3">Slope2</Str>
 			<Str sr="arg1" ve="3">%Slope</Str>
-			<Int sr="arg2" val="32"/>
+			<Int sr="arg2" val="30"/>
 			<Int sr="arg3" val="100"/>
 			<Str sr="arg4" ve="3">#FF000000</Str>
 			<Str sr="arg5" ve="3"/>
-			<Int sr="arg6" val="5"/>
+			<Int sr="arg6" val="0"/>
 			<Int sr="arg7" val="0"/>
 			<Int sr="arg8" val="0"/>
 			<RectElement sr="background">
@@ -292,14 +481,14 @@ https://github.com/Falcosc/locus-addon-tasker/wiki/Examples#examples</d>
 		<TextElement sr="elements3" ve="3">
 			<clickTask>4</clickTask>
 			<flags>4</flags>
-			<geom>0,4,218,74,0,0,196,73</geom>
+			<geom>0,3,193,75,0,0,173,64</geom>
 			<Str sr="arg0" ve="3">Slope3</Str>
 			<Str sr="arg1" ve="3">%Slope</Str>
-			<Int sr="arg2" val="32"/>
+			<Int sr="arg2" val="30"/>
 			<Int sr="arg3" val="100"/>
 			<Str sr="arg4" ve="3">#FF000000</Str>
 			<Str sr="arg5" ve="3"/>
-			<Int sr="arg6" val="5"/>
+			<Int sr="arg6" val="0"/>
 			<Int sr="arg7" val="0"/>
 			<Int sr="arg8" val="0"/>
 			<RectElement sr="background">
@@ -318,14 +507,14 @@ https://github.com/Falcosc/locus-addon-tasker/wiki/Examples#examples</d>
 		<TextElement sr="elements4" ve="3">
 			<clickTask>6</clickTask>
 			<flags>4</flags>
-			<geom>4,0,218,74,0,0,196,73</geom>
+			<geom>3,0,193,75,0,0,173,64</geom>
 			<Str sr="arg0" ve="3">Slope4</Str>
 			<Str sr="arg1" ve="3">%Slope</Str>
-			<Int sr="arg2" val="32"/>
+			<Int sr="arg2" val="30"/>
 			<Int sr="arg3" val="100"/>
 			<Str sr="arg4" ve="3">#FF000000</Str>
 			<Str sr="arg5" ve="3"/>
-			<Int sr="arg6" val="5"/>
+			<Int sr="arg6" val="0"/>
 			<Int sr="arg7" val="0"/>
 			<Int sr="arg8" val="0"/>
 			<RectElement sr="background">
@@ -344,14 +533,14 @@ https://github.com/Falcosc/locus-addon-tasker/wiki/Examples#examples</d>
 		<TextElement sr="elements5" ve="3">
 			<clickTask>9</clickTask>
 			<flags>4</flags>
-			<geom>2,2,218,74,0,0,196,73</geom>
+			<geom>1,1,193,75,0,0,173,64</geom>
 			<Str sr="arg0" ve="3">Slope</Str>
 			<Str sr="arg1" ve="3">%Slope</Str>
-			<Int sr="arg2" val="32"/>
+			<Int sr="arg2" val="30"/>
 			<Int sr="arg3" val="100"/>
 			<Str sr="arg4" ve="3">#FFFFCB00</Str>
 			<Str sr="arg5" ve="3"/>
-			<Int sr="arg6" val="5"/>
+			<Int sr="arg6" val="0"/>
 			<Int sr="arg7" val="0"/>
 			<Int sr="arg8" val="0"/>
 			<RectElement sr="background">
@@ -380,7 +569,7 @@ https://github.com/Falcosc/locus-addon-tasker/wiki/Examples#examples</d>
 	</Scene>
 	<Task sr="task10">
 		<cdate>1534609882066</cdate>
-		<edate>1668457315719</edate>
+		<edate>1701174024618</edate>
 		<id>10</id>
 		<nme>UpdateOverlays</nme>
 		<pri>6</pri>
@@ -415,7 +604,21 @@ Unique package name for the app&lt;/_array_net.dinglisch.android.tasker.RELEVANT
 			<Int sr="arg4" val="0"/>
 		</Action>
 		<Action sr="act10" ve="7">
+			<code>137</code>
+			<label>Silently abort task if request sensors failed</label>
+			<Int sr="arg0" val="0"/>
+			<Str sr="arg1" ve="3"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%err</lhs>
+					<op>12</op>
+					<rhs></rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act11" ve="7">
 			<code>37</code>
+			<coll>true</coll>
 			<ConditionList sr="if">
 				<Condition sr="c0" ve="3">
 					<lhs>%CfgShowSlope</lhs>
@@ -424,18 +627,18 @@ Unique package name for the app&lt;/_array_net.dinglisch.android.tasker.RELEVANT
 				</Condition>
 			</ConditionList>
 		</Action>
-		<Action sr="act11" ve="7">
+		<Action sr="act12" ve="7">
 			<code>547</code>
 			<se>false</se>
 			<Str sr="arg0" ve="3">%calc_slope</Str>
-			<Str sr="arg1" ve="3">tan(torad(round(0 - %pitch))) * 100</Str>
+			<Str sr="arg1" ve="3">tan(torad(round(%pitch))) * 100</Str>
 			<Int sr="arg2" val="0"/>
 			<Int sr="arg3" val="1"/>
 			<Int sr="arg4" val="0"/>
 			<Int sr="arg5" val="0"/>
 			<Int sr="arg6" val="0"/>
 		</Action>
-		<Action sr="act12" ve="7">
+		<Action sr="act13" ve="7">
 			<code>135</code>
 			<label>Skip slope if error</label>
 			<Int sr="arg0" val="0"/>
@@ -449,7 +652,7 @@ Unique package name for the app&lt;/_array_net.dinglisch.android.tasker.RELEVANT
 				</Condition>
 			</ConditionList>
 		</Action>
-		<Action sr="act13" ve="7">
+		<Action sr="act14" ve="7">
 			<code>547</code>
 			<Str sr="arg0" ve="3">%filtered_slope</Str>
 			<Str sr="arg1" ve="3">%calc_slope</Str>
@@ -459,7 +662,7 @@ Unique package name for the app&lt;/_array_net.dinglisch.android.tasker.RELEVANT
 			<Int sr="arg5" val="0"/>
 			<Int sr="arg6" val="0"/>
 		</Action>
-		<Action sr="act14" ve="7">
+		<Action sr="act15" ve="7">
 			<code>37</code>
 			<coll>false</coll>
 			<ConditionList sr="if">
@@ -470,7 +673,7 @@ Unique package name for the app&lt;/_array_net.dinglisch.android.tasker.RELEVANT
 				</Condition>
 			</ConditionList>
 		</Action>
-		<Action sr="act15" ve="7">
+		<Action sr="act16" ve="7">
 			<code>547</code>
 			<Str sr="arg0" ve="3">%SlopeResetCounter</Str>
 			<Str sr="arg1" ve="3">0</Str>
@@ -480,7 +683,7 @@ Unique package name for the app&lt;/_array_net.dinglisch.android.tasker.RELEVANT
 			<Int sr="arg5" val="3"/>
 			<Int sr="arg6" val="1"/>
 		</Action>
-		<Action sr="act16" ve="7">
+		<Action sr="act17" ve="7">
 			<code>547</code>
 			<Str sr="arg0" ve="3">%filtered_slope</Str>
 			<Str sr="arg1" ve="3">%calc_slope</Str>
@@ -490,7 +693,7 @@ Unique package name for the app&lt;/_array_net.dinglisch.android.tasker.RELEVANT
 			<Int sr="arg5" val="3"/>
 			<Int sr="arg6" val="1"/>
 		</Action>
-		<Action sr="act17" ve="7">
+		<Action sr="act18" ve="7">
 			<code>43</code>
 			<ConditionList sr="if">
 				<Condition sr="c0" ve="3">
@@ -500,7 +703,7 @@ Unique package name for the app&lt;/_array_net.dinglisch.android.tasker.RELEVANT
 				</Condition>
 			</ConditionList>
 		</Action>
-		<Action sr="act18" ve="7">
+		<Action sr="act19" ve="7">
 			<code>37</code>
 			<coll>false</coll>
 			<ConditionList sr="if">
@@ -511,18 +714,9 @@ Unique package name for the app&lt;/_array_net.dinglisch.android.tasker.RELEVANT
 				</Condition>
 			</ConditionList>
 		</Action>
-		<Action sr="act19" ve="7">
-			<code>547</code>
-			<Str sr="arg0" ve="3">%SlopeResetCounter</Str>
-			<Str sr="arg1" ve="3">%SlopeResetCounter + 1</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="1"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-			<Int sr="arg6" val="1"/>
-		</Action>
 		<Action sr="act2" ve="7">
 			<code>37</code>
+			<coll>false</coll>
 			<ConditionList sr="if">
 				<bool0>Or</bool0>
 				<Condition sr="c0" ve="3">
@@ -538,9 +732,19 @@ Unique package name for the app&lt;/_array_net.dinglisch.android.tasker.RELEVANT
 			</ConditionList>
 		</Action>
 		<Action sr="act20" ve="7">
-			<code>43</code>
+			<code>547</code>
+			<Str sr="arg0" ve="3">%SlopeResetCounter</Str>
+			<Str sr="arg1" ve="3">%SlopeResetCounter + 1</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="1"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="1"/>
 		</Action>
 		<Action sr="act21" ve="7">
+			<code>43</code>
+		</Action>
+		<Action sr="act22" ve="7">
 			<code>547</code>
 			<Str sr="arg0" ve="3">%SlopeResetCounter</Str>
 			<Str sr="arg1" ve="3">0</Str>
@@ -550,10 +754,10 @@ Unique package name for the app&lt;/_array_net.dinglisch.android.tasker.RELEVANT
 			<Int sr="arg5" val="3"/>
 			<Int sr="arg6" val="1"/>
 		</Action>
-		<Action sr="act22" ve="7">
+		<Action sr="act23" ve="7">
 			<code>38</code>
 		</Action>
-		<Action sr="act23" ve="7">
+		<Action sr="act24" ve="7">
 			<code>547</code>
 			<Str sr="arg0" ve="3">%filtered_slope</Str>
 			<Str sr="arg1" ve="3">%SlopeNoUnit + 1</Str>
@@ -563,7 +767,7 @@ Unique package name for the app&lt;/_array_net.dinglisch.android.tasker.RELEVANT
 			<Int sr="arg5" val="0"/>
 			<Int sr="arg6" val="1"/>
 		</Action>
-		<Action sr="act24" ve="7">
+		<Action sr="act25" ve="7">
 			<code>43</code>
 			<ConditionList sr="if">
 				<Condition sr="c0" ve="3">
@@ -573,7 +777,7 @@ Unique package name for the app&lt;/_array_net.dinglisch.android.tasker.RELEVANT
 				</Condition>
 			</ConditionList>
 		</Action>
-		<Action sr="act25" ve="7">
+		<Action sr="act26" ve="7">
 			<code>37</code>
 			<coll>false</coll>
 			<ConditionList sr="if">
@@ -584,7 +788,7 @@ Unique package name for the app&lt;/_array_net.dinglisch.android.tasker.RELEVANT
 				</Condition>
 			</ConditionList>
 		</Action>
-		<Action sr="act26" ve="7">
+		<Action sr="act27" ve="7">
 			<code>547</code>
 			<Str sr="arg0" ve="3">%SlopeResetCounter</Str>
 			<Str sr="arg1" ve="3">%SlopeResetCounter + 1</Str>
@@ -594,10 +798,10 @@ Unique package name for the app&lt;/_array_net.dinglisch.android.tasker.RELEVANT
 			<Int sr="arg5" val="3"/>
 			<Int sr="arg6" val="1"/>
 		</Action>
-		<Action sr="act27" ve="7">
+		<Action sr="act28" ve="7">
 			<code>43</code>
 		</Action>
-		<Action sr="act28" ve="7">
+		<Action sr="act29" ve="7">
 			<code>547</code>
 			<Str sr="arg0" ve="3">%SlopeResetCounter</Str>
 			<Str sr="arg1" ve="3">0</Str>
@@ -606,9 +810,6 @@ Unique package name for the app&lt;/_array_net.dinglisch.android.tasker.RELEVANT
 			<Int sr="arg4" val="0"/>
 			<Int sr="arg5" val="3"/>
 			<Int sr="arg6" val="1"/>
-		</Action>
-		<Action sr="act29" ve="7">
-			<code>38</code>
 		</Action>
 		<Action sr="act3" ve="7">
 			<code>547</code>
@@ -622,6 +823,9 @@ Unique package name for the app&lt;/_array_net.dinglisch.android.tasker.RELEVANT
 			<Int sr="arg6" val="1"/>
 		</Action>
 		<Action sr="act30" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act31" ve="7">
 			<code>547</code>
 			<Str sr="arg0" ve="3">%filtered_slope</Str>
 			<Str sr="arg1" ve="3">%SlopeNoUnit - 1</Str>
@@ -631,10 +835,10 @@ Unique package name for the app&lt;/_array_net.dinglisch.android.tasker.RELEVANT
 			<Int sr="arg5" val="0"/>
 			<Int sr="arg6" val="1"/>
 		</Action>
-		<Action sr="act31" ve="7">
+		<Action sr="act32" ve="7">
 			<code>38</code>
 		</Action>
-		<Action sr="act32" ve="7">
+		<Action sr="act33" ve="7">
 			<code>547</code>
 			<Str sr="arg0" ve="3">%SlopeNoUnit</Str>
 			<Str sr="arg1" ve="3">%filtered_slope</Str>
@@ -644,7 +848,7 @@ Unique package name for the app&lt;/_array_net.dinglisch.android.tasker.RELEVANT
 			<Int sr="arg5" val="0"/>
 			<Int sr="arg6" val="1"/>
 		</Action>
-		<Action sr="act33" ve="7">
+		<Action sr="act34" ve="7">
 			<code>547</code>
 			<label>add unit to output</label>
 			<Str sr="arg0" ve="3">%filtered_slope</Str>
@@ -655,7 +859,7 @@ Unique package name for the app&lt;/_array_net.dinglisch.android.tasker.RELEVANT
 			<Int sr="arg5" val="3"/>
 			<Int sr="arg6" val="1"/>
 		</Action>
-		<Action sr="act34" ve="7">
+		<Action sr="act35" ve="7">
 			<code>547</code>
 			<Str sr="arg0" ve="3">%Slope</Str>
 			<Str sr="arg1" ve="3">%filtered_slope</Str>
@@ -665,14 +869,14 @@ Unique package name for the app&lt;/_array_net.dinglisch.android.tasker.RELEVANT
 			<Int sr="arg5" val="3"/>
 			<Int sr="arg6" val="1"/>
 		</Action>
-		<Action sr="act35" ve="7">
+		<Action sr="act36" ve="7">
 			<code>47</code>
 			<label>adjust dashboard overlay position here</label>
 			<Str sr="arg0" ve="3">LocusDashSlopeOverlay</Str>
 			<Int sr="arg1" val="0"/>
 			<Int sr="arg10" val="0"/>
-			<Int sr="arg2" val="22"/>
-			<Int sr="arg3" val="161"/>
+			<Int sr="arg2" val="105"/>
+			<Int sr="arg3" val="41"/>
 			<Int sr="arg4" val="0"/>
 			<Int sr="arg5" val="0"/>
 			<Int sr="arg6" val="1"/>
@@ -687,18 +891,23 @@ Unique package name for the app&lt;/_array_net.dinglisch.android.tasker.RELEVANT
 				</Condition>
 			</ConditionList>
 		</Action>
-		<Action sr="act36" ve="7">
+		<Action sr="act37" ve="7">
 			<code>43</code>
 		</Action>
-		<Action sr="act37" ve="7">
+		<Action sr="act38" ve="7">
 			<code>49</code>
 			<Str sr="arg0" ve="3">LocusDashSlopeOverlay</Str>
 		</Action>
-		<Action sr="act38" ve="7">
+		<Action sr="act39" ve="7">
 			<code>38</code>
 		</Action>
-		<Action sr="act39" ve="7">
+		<Action sr="act4" ve="7">
+			<code>49</code>
+			<Str sr="arg0" ve="3">LocusDashSlopeOverlay</Str>
+		</Action>
+		<Action sr="act40" ve="7">
 			<code>37</code>
+			<coll>true</coll>
 			<ConditionList sr="if">
 				<Condition sr="c0" ve="3">
 					<lhs>%CfgShowElev</lhs>
@@ -707,12 +916,9 @@ Unique package name for the app&lt;/_array_net.dinglisch.android.tasker.RELEVANT
 				</Condition>
 			</ConditionList>
 		</Action>
-		<Action sr="act4" ve="7">
-			<code>49</code>
-			<Str sr="arg0" ve="3">LocusDashSlopeOverlay</Str>
-		</Action>
-		<Action sr="act40" ve="7">
+		<Action sr="act41" ve="7">
 			<code>37</code>
+			<coll>false</coll>
 			<ConditionList sr="if">
 				<Condition sr="c0" ve="3">
 					<lhs>%CfgElevAsPercent</lhs>
@@ -721,7 +927,7 @@ Unique package name for the app&lt;/_array_net.dinglisch.android.tasker.RELEVANT
 				</Condition>
 			</ConditionList>
 		</Action>
-		<Action sr="act41" ve="7">
+		<Action sr="act42" ve="7">
 			<code>547</code>
 			<label>add unit to output</label>
 			<Str sr="arg0" ve="3">%calc_remain_uphill_elevation_percent</Str>
@@ -732,7 +938,7 @@ Unique package name for the app&lt;/_array_net.dinglisch.android.tasker.RELEVANT
 			<Int sr="arg5" val="3"/>
 			<Int sr="arg6" val="1"/>
 		</Action>
-		<Action sr="act42" ve="7">
+		<Action sr="act43" ve="7">
 			<code>547</code>
 			<Str sr="arg0" ve="3">%ElevationRemainingUp</Str>
 			<Str sr="arg1" ve="3">%calc_remain_uphill_elevation_percent</Str>
@@ -742,10 +948,10 @@ Unique package name for the app&lt;/_array_net.dinglisch.android.tasker.RELEVANT
 			<Int sr="arg5" val="3"/>
 			<Int sr="arg6" val="1"/>
 		</Action>
-		<Action sr="act43" ve="7">
+		<Action sr="act44" ve="7">
 			<code>43</code>
 		</Action>
-		<Action sr="act44" ve="7">
+		<Action sr="act45" ve="7">
 			<code>547</code>
 			<label>add unit to output</label>
 			<Str sr="arg0" ve="3">%calc_remain_uphill_elevation</Str>
@@ -756,7 +962,7 @@ Unique package name for the app&lt;/_array_net.dinglisch.android.tasker.RELEVANT
 			<Int sr="arg5" val="3"/>
 			<Int sr="arg6" val="1"/>
 		</Action>
-		<Action sr="act45" ve="7">
+		<Action sr="act46" ve="7">
 			<code>547</code>
 			<Str sr="arg0" ve="3">%ElevationRemainingUp</Str>
 			<Str sr="arg1" ve="3">%calc_remain_uphill_elevation</Str>
@@ -766,23 +972,23 @@ Unique package name for the app&lt;/_array_net.dinglisch.android.tasker.RELEVANT
 			<Int sr="arg5" val="3"/>
 			<Int sr="arg6" val="1"/>
 		</Action>
-		<Action sr="act46" ve="7">
+		<Action sr="act47" ve="7">
 			<code>38</code>
 		</Action>
-		<Action sr="act47" ve="7">
+		<Action sr="act48" ve="7">
 			<code>194</code>
 			<Str sr="arg0" ve="3">LocusDashRemEleOverlay</Str>
 			<Int sr="arg1" val="0"/>
 			<Str sr="arg2" ve="3">%scene_status</Str>
 		</Action>
-		<Action sr="act48" ve="7">
+		<Action sr="act49" ve="7">
 			<code>47</code>
 			<label>adjust dashboard overlay position here</label>
 			<Str sr="arg0" ve="3">LocusDashRemEleOverlay</Str>
 			<Int sr="arg1" val="0"/>
 			<Int sr="arg10" val="0"/>
 			<Int sr="arg2" val="200"/>
-			<Int sr="arg3" val="161"/>
+			<Int sr="arg3" val="157"/>
 			<Int sr="arg4" val="0"/>
 			<Int sr="arg5" val="0"/>
 			<Int sr="arg6" val="1"/>
@@ -803,52 +1009,221 @@ Unique package name for the app&lt;/_array_net.dinglisch.android.tasker.RELEVANT
 				</Condition>
 			</ConditionList>
 		</Action>
-		<Action sr="act49" ve="7">
-			<code>43</code>
-		</Action>
 		<Action sr="act5" ve="7">
 			<code>49</code>
 			<Str sr="arg0" ve="3">LocusDashRemEleOverlay</Str>
 		</Action>
 		<Action sr="act50" ve="7">
-			<code>49</code>
-			<Str sr="arg0" ve="3">LocusDashRemEleOverlay</Str>
+			<code>43</code>
 		</Action>
 		<Action sr="act51" ve="7">
-			<code>38</code>
+			<code>49</code>
+			<Str sr="arg0" ve="3">LocusDashRemEleOverlay</Str>
 		</Action>
 		<Action sr="act52" ve="7">
 			<code>38</code>
 		</Action>
+		<Action sr="act53" ve="7">
+			<code>37</code>
+			<coll>false</coll>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%CfgShowHeart</lhs>
+					<op>0</op>
+					<rhs>true</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act54" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%sensor_hrm</lhs>
+					<op>6</op>
+					<rhs>%MaxHeartRate * 0.59</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act55" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%HeartZone</Str>
+			<Str sr="arg1" ve="3">Z1</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="1"/>
+		</Action>
+		<Action sr="act56" ve="7">
+			<code>43</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%sensor_hrm</lhs>
+					<op>6</op>
+					<rhs>%MaxHeartRate * 0.78</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act57" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%HeartZone</Str>
+			<Str sr="arg1" ve="3">Z2</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="1"/>
+		</Action>
+		<Action sr="act58" ve="7">
+			<code>43</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%sensor_hrm</lhs>
+					<op>6</op>
+					<rhs>170</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act59" ve="7">
+			<code>43</code>
+			<on>false</on>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%sensor_hrm</lhs>
+					<op>6</op>
+					<rhs>%MaxHeartRate * 0.87</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
 		<Action sr="act6" ve="7">
+			<code>49</code>
+			<Str sr="arg0" ve="3">LocusDashHeartOverlay</Str>
+		</Action>
+		<Action sr="act60" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%HeartZone</Str>
+			<Str sr="arg1" ve="3">Z3</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="1"/>
+		</Action>
+		<Action sr="act61" ve="7">
+			<code>43</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%sensor_hrm</lhs>
+					<op>6</op>
+					<rhs>%MaxHeartRate * 0.97</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act62" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%HeartZone</Str>
+			<Str sr="arg1" ve="3">Z4</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="1"/>
+		</Action>
+		<Action sr="act63" ve="7">
 			<code>43</code>
 		</Action>
+		<Action sr="act64" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%HeartZone</Str>
+			<Str sr="arg1" ve="3">Z5</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="1"/>
+		</Action>
+		<Action sr="act65" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act66" ve="7">
+			<code>194</code>
+			<Str sr="arg0" ve="3">LocusDashHeartOverlay</Str>
+			<Int sr="arg1" val="0"/>
+			<Str sr="arg2" ve="3">%scene_status</Str>
+		</Action>
+		<Action sr="act67" ve="7">
+			<code>47</code>
+			<label>adjust dashboard overlay position here</label>
+			<Str sr="arg0" ve="3">LocusDashHeartOverlay</Str>
+			<Int sr="arg1" val="0"/>
+			<Int sr="arg10" val="0"/>
+			<Int sr="arg2" val="182"/>
+			<Int sr="arg3" val="89"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="0"/>
+			<Int sr="arg6" val="1"/>
+			<Int sr="arg7" val="1"/>
+			<Int sr="arg8" val="1"/>
+			<Int sr="arg9" val="0"/>
+			<ConditionList sr="if">
+				<bool0>And</bool0>
+				<Condition sr="c0" ve="3">
+					<lhs>%scene_status</lhs>
+					<op>1</op>
+					<rhs>visible</rhs>
+				</Condition>
+				<Condition sr="c1" ve="3">
+					<lhs>%HeartZone</lhs>
+					<op>12</op>
+					<rhs></rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act68" ve="7">
+			<code>43</code>
+		</Action>
+		<Action sr="act69" ve="7">
+			<code>49</code>
+			<Str sr="arg0" ve="3">LocusDashHeartOverlay</Str>
+		</Action>
 		<Action sr="act7" ve="7">
+			<code>43</code>
+		</Action>
+		<Action sr="act70" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act71" ve="7">
+			<code>38</code>
+		</Action>
+		<Action sr="act8" ve="7">
 			<code>194</code>
 			<Str sr="arg0" ve="3">LocusDashSlopeOverlay</Str>
 			<Int sr="arg1" val="0"/>
 			<Str sr="arg2" ve="3">%scene_status</Str>
 		</Action>
-		<Action sr="act8" ve="7">
+		<Action sr="act9" ve="7">
 			<code>1120274117</code>
 			<se>false</se>
 			<Bundle sr="arg0">
 				<Vals sr="val">
-					<INTENT_EXTRA_FIELD_LIST>&lt;StringArray sr=""&gt;&lt;_array_INTENT_EXTRA_FIELD_LIST0&gt;calc_remain_uphill_elevation&lt;/_array_INTENT_EXTRA_FIELD_LIST0&gt;&lt;_array_INTENT_EXTRA_FIELD_LIST1&gt;calc_remain_uphill_elevation_percent&lt;/_array_INTENT_EXTRA_FIELD_LIST1&gt;&lt;_array_INTENT_EXTRA_FIELD_LIST2&gt;pitch&lt;/_array_INTENT_EXTRA_FIELD_LIST2&gt;&lt;/StringArray&gt;</INTENT_EXTRA_FIELD_LIST>
+					<INTENT_EXTRA_FIELD_LIST>&lt;StringArray sr=""&gt;&lt;_array_INTENT_EXTRA_FIELD_LIST0&gt;calc_remain_uphill_elevation&lt;/_array_INTENT_EXTRA_FIELD_LIST0&gt;&lt;_array_INTENT_EXTRA_FIELD_LIST1&gt;calc_remain_uphill_elevation_percent&lt;/_array_INTENT_EXTRA_FIELD_LIST1&gt;&lt;_array_INTENT_EXTRA_FIELD_LIST2&gt;pitch&lt;/_array_INTENT_EXTRA_FIELD_LIST2&gt;&lt;_array_INTENT_EXTRA_FIELD_LIST3&gt;sensor_hrm&lt;/_array_INTENT_EXTRA_FIELD_LIST3&gt;&lt;/StringArray&gt;</INTENT_EXTRA_FIELD_LIST>
 					<INTENT_EXTRA_FIELD_LIST-type>[Ljava.lang.String;</INTENT_EXTRA_FIELD_LIST-type>
 					<LOCUS_ADDON_ACTION_TYPE>UPDATE_CONTAINER_REQUEST</LOCUS_ADDON_ACTION_TYPE>
 					<LOCUS_ADDON_ACTION_TYPE-type>java.lang.String</LOCUS_ADDON_ACTION_TYPE-type>
 					<com.twofortyfouram.locale.intent.extra.BLURB>calc_remain_uphill_elevation,
 calc_remain_uphill_elevation_percent,
-pitch</com.twofortyfouram.locale.intent.extra.BLURB>
+pitch,
+sensor_hrm</com.twofortyfouram.locale.intent.extra.BLURB>
 					<com.twofortyfouram.locale.intent.extra.BLURB-type>java.lang.String</com.twofortyfouram.locale.intent.extra.BLURB-type>
-					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;%pitch
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;%sensor_hrm
+Heart rate
+&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;%pitch
 Pitch
-&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;%calc_remain_uphill_elevation
+&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;%calc_remain_uphill_elevation
 Calc Remain Uphill Elevation
-&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;%calc_remain_uphill_elevation_percent
+&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES3&gt;%calc_remain_uphill_elevation_percent
 Calc Remain Uphill Elevation Percent
-&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES2&gt;&lt;/StringArray&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
+&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES3&gt;&lt;/StringArray&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
 					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
 					<net.dinglisch.android.tasker.subbundled>true</net.dinglisch.android.tasker.subbundled>
 					<net.dinglisch.android.tasker.subbundled-type>java.lang.Boolean</net.dinglisch.android.tasker.subbundled-type>
@@ -858,19 +1233,6 @@ Calc Remain Uphill Elevation Percent
 			<Str sr="arg2" ve="3">falcosc.locus.addon.tasker.intent.edit.UpdateContainerEdit</Str>
 			<Int sr="arg3" val="10"/>
 			<Int sr="arg4" val="0"/>
-		</Action>
-		<Action sr="act9" ve="7">
-			<code>137</code>
-			<label>Silently abort task if request sensors failed</label>
-			<Int sr="arg0" val="0"/>
-			<Str sr="arg1" ve="3"/>
-			<ConditionList sr="if">
-				<Condition sr="c0" ve="3">
-					<lhs>%err</lhs>
-					<op>12</op>
-					<rhs></rhs>
-				</Condition>
-			</ConditionList>
 		</Action>
 	</Task>
 	<Task sr="task13">
@@ -926,9 +1288,19 @@ Calc Remain Uphill Elevation Percent
 			<Str sr="arg0" ve="3">%scene_name</Str>
 		</Action>
 	</Task>
+	<Task sr="task25">
+		<cdate>1533134198959</cdate>
+		<edate>1533134198959</edate>
+		<id>25</id>
+		<pri>102</pri>
+		<Action sr="act0" ve="7">
+			<code>49</code>
+			<Str sr="arg0" ve="3">%scene_name</Str>
+		</Action>
+	</Task>
 	<Task sr="task27">
 		<cdate>1665865170655</cdate>
-		<edate>1666047537609</edate>
+		<edate>1676709221251</edate>
 		<id>27</id>
 		<nme>ToggleSlopeOverlay</nme>
 		<pri>1000</pri>
@@ -969,6 +1341,26 @@ Calc Remain Uphill Elevation Percent
 			<code>38</code>
 		</Action>
 	</Task>
+	<Task sr="task28">
+		<cdate>1533134198959</cdate>
+		<edate>1533134198959</edate>
+		<id>28</id>
+		<pri>102</pri>
+		<Action sr="act0" ve="7">
+			<code>49</code>
+			<Str sr="arg0" ve="3">%scene_name</Str>
+		</Action>
+	</Task>
+	<Task sr="task29">
+		<cdate>1533134198959</cdate>
+		<edate>1533134198959</edate>
+		<id>29</id>
+		<pri>102</pri>
+		<Action sr="act0" ve="7">
+			<code>49</code>
+			<Str sr="arg0" ve="3">%scene_name</Str>
+		</Action>
+	</Task>
 	<Task sr="task3">
 		<cdate>1533134198959</cdate>
 		<edate>1533134198959</edate>
@@ -979,9 +1371,55 @@ Calc Remain Uphill Elevation Percent
 			<Str sr="arg0" ve="3">%scene_name</Str>
 		</Action>
 	</Task>
+	<Task sr="task30">
+		<cdate>1682178679767</cdate>
+		<edate>1682182462557</edate>
+		<id>30</id>
+		<nme>ToggleHWKeysAndTouch</nme>
+		<pri>6</pri>
+		<Action sr="act0" ve="7">
+			<code>1687767515</code>
+			<Bundle sr="arg0">
+				<Vals sr="val">
+					<EnableGestureMode>3</EnableGestureMode>
+					<EnableGestureMode-type>java.lang.String</EnableGestureMode-type>
+					<EnableKeySurpressMode>3</EnableKeySurpressMode>
+					<EnableKeySurpressMode-type>java.lang.String</EnableKeySurpressMode-type>
+					<KeyCode>&lt;StringArray sr=""&gt;&lt;_array_KeyCode0&gt;187&lt;/_array_KeyCode0&gt;&lt;_array_KeyCode1&gt;3&lt;/_array_KeyCode1&gt;&lt;_array_KeyCode2&gt;4&lt;/_array_KeyCode2&gt;&lt;/StringArray&gt;</KeyCode>
+					<KeyCode-type>[Ljava.lang.String;</KeyCode-type>
+					<ManualKeyCodes>&lt;null&gt;</ManualKeyCodes>
+					<ManualKeyCodes-type>java.lang.String</ManualKeyCodes-type>
+					<com.twofortyfouram.locale.intent.extra.BLURB>Gestures: Toggle
+Key Suppress: Toggle
+Keys: App Switch
+Home
+Back</com.twofortyfouram.locale.intent.extra.BLURB>
+					<com.twofortyfouram.locale.intent.extra.BLURB-type>java.lang.String</com.twofortyfouram.locale.intent.extra.BLURB-type>
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;%err
+Error Code
+Only available if you select &amp;lt;b&amp;gt;Continue Task After Error&amp;lt;/b&amp;gt; and the action ends in error&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;%errmsg
+Error Message
+Only available if you select &amp;lt;b&amp;gt;Continue Task After Error&amp;lt;/b&amp;gt; and the action ends in error&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES1&gt;&lt;/StringArray&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
+					<net.dinglisch.android.tasker.extras.VARIABLE_REPLACE_KEYS>KeyCode EnableGestureMode EnableKeySurpressMode plugininstanceid plugintypeid </net.dinglisch.android.tasker.extras.VARIABLE_REPLACE_KEYS>
+					<net.dinglisch.android.tasker.extras.VARIABLE_REPLACE_KEYS-type>java.lang.String</net.dinglisch.android.tasker.extras.VARIABLE_REPLACE_KEYS-type>
+					<net.dinglisch.android.tasker.subbundled>true</net.dinglisch.android.tasker.subbundled>
+					<net.dinglisch.android.tasker.subbundled-type>java.lang.Boolean</net.dinglisch.android.tasker.subbundled-type>
+					<plugininstanceid>c83d4b4a-e537-419d-afea-891ee2d7fcc5</plugininstanceid>
+					<plugininstanceid-type>java.lang.String</plugininstanceid-type>
+					<plugintypeid>com.joaomgcd.autoinput.intent.IntentModes</plugintypeid>
+					<plugintypeid-type>java.lang.String</plugintypeid-type>
+				</Vals>
+			</Bundle>
+			<Str sr="arg1" ve="3">com.joaomgcd.autoinput</Str>
+			<Str sr="arg2" ve="3">com.joaomgcd.autoinput.activity.ActivityConfigModes</Str>
+			<Int sr="arg3" val="2"/>
+			<Int sr="arg4" val="1"/>
+		</Action>
+	</Task>
 	<Task sr="task31">
 		<cdate>1534609882066</cdate>
-		<edate>1666085461143</edate>
+		<edate>1676709631977</edate>
 		<id>31</id>
 		<nme>UpdateTotalElevationOverlay</nme>
 		<pri>100</pri>
@@ -1119,7 +1557,7 @@ Calc Total Uphill Elevation
 	</Task>
 	<Task sr="task32">
 		<cdate>1665865170655</cdate>
-		<edate>1666047509692</edate>
+		<edate>1682182396812</edate>
 		<id>32</id>
 		<nme>ToggleElevationOverlay</nme>
 		<pri>1000</pri>
@@ -1149,6 +1587,69 @@ Calc Total Uphill Elevation
 		<Action sr="act3" ve="7">
 			<code>547</code>
 			<Str sr="arg0" ve="3">%CfgShowElev</Str>
+			<Str sr="arg1" ve="3">true</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="1"/>
+		</Action>
+		<Action sr="act4" ve="7">
+			<code>38</code>
+		</Action>
+	</Task>
+	<Task sr="task34">
+		<cdate>1533134198959</cdate>
+		<edate>1533134198959</edate>
+		<id>34</id>
+		<pri>102</pri>
+		<Action sr="act0" ve="7">
+			<code>49</code>
+			<Str sr="arg0" ve="3">%scene_name</Str>
+		</Action>
+	</Task>
+	<Task sr="task35">
+		<cdate>1533134198959</cdate>
+		<edate>1533134198959</edate>
+		<id>35</id>
+		<pri>8</pri>
+		<Action sr="act0" ve="7">
+			<code>49</code>
+			<Str sr="arg0" ve="3">%scene_name</Str>
+		</Action>
+	</Task>
+	<Task sr="task36">
+		<cdate>1665865170655</cdate>
+		<edate>1694720215158</edate>
+		<id>36</id>
+		<nme>ToggleHeartOverlay</nme>
+		<pri>1000</pri>
+		<Action sr="act0" ve="7">
+			<code>37</code>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%CfgShowHeart</lhs>
+					<op>0</op>
+					<rhs>true</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act1" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%CfgShowHeart</Str>
+			<Str sr="arg1" ve="3">false</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="1"/>
+		</Action>
+		<Action sr="act2" ve="7">
+			<code>43</code>
+		</Action>
+		<Action sr="act3" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%CfgShowHeart</Str>
 			<Str sr="arg1" ve="3">true</Str>
 			<Int sr="arg2" val="0"/>
 			<Int sr="arg3" val="0"/>
@@ -1192,7 +1693,7 @@ Calc Total Uphill Elevation
 	</Task>
 	<Task sr="task8">
 		<cdate>1536298429717</cdate>
-		<edate>1665603693385</edate>
+		<edate>1701174192210</edate>
 		<id>8</id>
 		<nme>ToggleLocusScreenLock</nme>
 		<pri>6</pri>
